@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POTATOSCRIPT 履歴書</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;  /* 白背景 */
+      color: #2c3e50;  /* 読みやすい濃い灰色の文字色 */
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1000px;
+      background-color: #f8f9fa;  /* 薄い灰色の背景 */
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #27ae60;  /* エレガントなダークグリーン */
+      margin-bottom: 1.5rem;
+    }
+
+    h2, h3 {
+      color: #2c3e50;  /* 見出し用の濃い灰色 */
+    }
+
+    a {
+      color: #27ae60;  /* プロフェッショナルな外観のダークグリーンのリンク */
+      text-decoration: none;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #27ae60;  /* ダークグリーンの区切り線 */
+      margin: 2rem 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* セクションタイトル */
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #27ae60;  /* ダークグリーンのセクションタイトル */
+      border-bottom: 2px solid #27ae60;
+      padding-bottom: 0.5rem;
+    }
+
+    /* 個人情報 */
+    .personal-info li {
+      font-size: 1.1rem;
+      color: #2c3e50;  /* 個人情報用の暗い文字色 */
+    }
+
+    /* 職業名・期間 */
+    .job-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #27ae60;  /* 職業名のダークグリーン */
+    }
+
+    .job-period {
+      font-style: italic;
+      color: #7f8c8d;  /* 期間用の灰色 */
+    }
+
+    /* プロジェクト & スキル */
+    .project {
+      margin-left: 1rem;
+      font-size: 1rem;
+      color: #7f8c8d;  /* プロジェクト説明用の灰色 */
+    }
+
+    .skills p {
+      margin-bottom: 0.5rem;
+      color: #2c3e50;  /* スキル用のダークグレー */
+    }
+
+    /* レスポンシブデザイン */
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+      }
+
+      .job-title {
+        font-size: 1rem;
+      }
+    }
+
+    canvas {
+      width: 80% !important;
+      height: auto !important;
+    }
+
+    /* レーダーチャートセクション */
+    .radar-chart-container {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    #skillsRadarChart {
+      width: 100%;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>POTATOSCRIPT 履歴書</h1>
+
+    <section>
+      <h2 class="section-title">個人情報</h2>
+      <ul class="personal-info">
+        <li><strong>名前</strong>: POTATOSCRIPT (<I>別途提供</I>)</li>
+        <li><strong>生年月日</strong>: <I>別途提供</I></li>
+        <li><strong>国籍</strong>: <I>別途提供</I></li>
+        <li><strong>民族</strong>: 中国系</li>
+        <li><strong>メール</strong>: <a href="mailto:potatoscript@hotmail.com">potatoscript@hotmail.com</a></li>
+        <li><strong>GitHub</strong>: <a href="https://github.com/potatoscript" target="_blank">POTATOSCRIPT</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">言語スキル</h2>
+      <ul>
+        <li><strong>日本語:</strong> JLPT N1 (現在勉強中、試験予定：2025年12月)
+          <div class="project"><strong>ビジネス日本語の熟練度:</strong> JLPT N1を準備中で、ビジネス関連の日本語の語彙と文法を強化しています。特にITやシステムエンジニアリングに関連した言葉を学んでいます。</div>
+        </li>
+        <li><strong>英語:</strong> TOEIC 830
+          <div class="project"><strong>流暢なコミュニケーション:</strong> TOEICスコア830を取得し、読み書き、リスニングのスキルを証明。英語を使用するビジネス環境での経験があります。</div>
+        </li>
+        <li><strong>中国語:</strong> ネイティブ
+          <div class="project"><strong>ネイティブスピーカー:</strong> 普通話（標準中国語）に堪能で、技術的およびカジュアルな会話が可能です。</div>
+        </li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2 class="section-title">学歴</h2>
+      <p><strong>コヴェントリー大学（イギリス）</strong><br>
+      機械工学学士（ファーストクラス・オナーズ）<br>
+      1997年6月 – 1999年7月<br>
+      <div class="project"><strong>卒業プロジェクト:</strong> MATLABを使用して共振周波数を検出するシステムを開発し、高度なデータ分析技術により精度と信頼性を向上させました。このプロジェクトは、工学的応用における機械的振動と周波数応答の理解を深めるものでした。</div>
+      </p>
+    </section>
+  
+    <section>
+      <h2 class="section-title">職務経験</h2>
+
+      <p class="job-title">日本のIT人材派遣会社 — シニアシステムエンジニア</p>
+      <p class="job-period">2023年1月 – 現在</p>
+      <ul>
+        <li><strong>ウェーハデータ統合＆分析プラットフォーム</strong> (Python, pandas, NumPy, SQLite, Plotly)
+          <div class="project"><strong>データ分析の効率化:</strong> 高度な分析技術と最適化手法を駆使し、データ処理効率を40％向上させました。</div>
+        </li>
+        <li><strong>エンタープライズデータフロー管理Webシステム</strong> (Django, PostgreSQL, Docker)
+          <div class="project"><strong>フルスタックシステム開発:</strong> 大規模データの処理およびトレーサビリティの確保を目的としたプラットフォームを開発しました。</div>
+        </li>
+        <li><strong>CAD自動化ツール</strong> (C#, WPF, SQLite)
+          <div class="project"><strong>設計生産性の向上:</strong> 手動での図面作成時間を70％削減しました。</div>
+        </li>
+        <li><strong>DevOps & CI/CDパイプライン</strong> (GitHub Actions, Jenkins, Pytest, SonarQube)
+          <div class="project"><strong>ソフトウェア配信プロセスの最適化:</strong> 自動化されたテストおよび継続的インテグレーションパイプラインの導入により、リリース時間を60％短縮しました。</div>
+        </li>
+      </ul>
+      
+      <hr>
+
+      <p class="job-title">東京ITスタートアップ企業 — システムエンジニア</p>
+      <p class="job-period">2022年6月 – 2022年12月</p>
+      <ul>
+        <li><strong>クラウド環境の経験:</strong> 初めてクラウド環境での業務に従事し、Azureクラウドプラットフォームへのコードの管理・デプロイ方法を学ぶ貴重な機会となりました。クラウドベースのアプリケーションの設定と保守の実務経験を積み、プロジェクトのスケーラビリティ、セキュリティ、データ管理において重要な役割を果たしました。</li>
+        <li><strong>Azure & セキュリティ重視:</strong> 病院の患者情報システムをAzure上で構築し、医療業界の基準および規制に準拠するための安全なデータ処理プロセスを実装しました。アクセス制御、暗号化、データストレージ戦略を設定し、患者の機密性を確保しました。</li>
+        <li><strong>協力とプロジェクト管理ツール:</strong> JIRAを使用してタスク、スプリント、プロジェクトの進捗を管理しました。JIRAを活用することで、プロジェクトの組織化が進み、各フェーズがタイムリーに完了することを確保できました。さらに、SourceTreeを使用してバージョン管理を行い、コードフローを効率的に管理し、最新の変更が確実にトラッキングされ、マージされるようにしました。</li>
+        <li><strong>学びと成長:</strong> クラウドベースの環境で働く機会を得たことで、開発者として、またエンジニアとして成長することができました。理論的な知識を実務に適用し、Azureでのアプリケーションパフォーマンス、信頼性、コスト最適化のためのベストプラクティスを学びました。</li>
+        <li><strong>チームワークとコミュニケーション:</strong> バックエンド開発者、セキュリティ専門家、UI/UXデザイナーなど、異なる専門分野のチームと密接に連携し、統一感のあるユーザーフレンドリーな製品を提供しました。この協力を通じて、コミュニケーション能力が向上し、クラウドプロジェクトにおける部門間の連携の重要性を深く理解しました。</li>
+        <li><strong>転職の理由:</strong> 半年後、ソフトウェア開発およびシステムエンジニアリングの分野でより幅広い責任と成長の機会を提供する新しい挑戦を求め、次のステップへ進むことを決意しました。東京ITスタートアップ企業で得た経験とスキルは非常に貴重でしたが、より大規模なプロジェクトに関わり、さまざまな技術に触れることで新しい挑戦をしたいと考えました。この決断は、キャリアのさらなる進展と異なるエンジニアリング実務に触れることへの意欲に基づいています。</li>
+      </ul>
+      
+
+      <hr>
+
+      <p class="job-title">自動車部品製造会社 — シニアデザインエンジニア</p>
+      <p class="job-period">2000年4月 – 2022年5月</p>
+      <ul>
+        <li><strong>新卒入社:</strong> コヴェントリー大学で機械工学の学士号を取得後、オイルシール製品デザイナーとして入社。</li>
+        <li><strong>製品デザインおよびプロトタイピング:</strong> CADおよびCAMソフトウェア（AutoCAD、Inventor）を駆使して、ゴム部品や振動部品のデザイン、プロトタイプ作成、テストを行い、品質と機能性を確保。</li>
+        <li><strong>品質保証:</strong> 製品の製造がスムーズに進むよう、テストの実施、調整を行い、生産チームと密に連携して高い品質基準を維持。</li>
+        <li><strong>プロセス改善:</strong> AutoCADおよびInventorにVBAを組み合わせた設計プロセスの自動化を推進し、効率化と手作業削減を実現。</li>
+        <li><strong>生産プロセスモデリング:</strong> Inventorを使用して生産プロセスをモデリングし、ボトルネックや潜在的な問題をシミュレーションを通じて明確化。</li>
+        <li><strong>効率化の推進:</strong> 生産時間の短縮やエラーの最小化を目的としたソリューションを開発し、業務効率を向上させ、コスト削減を実現。</li>
+        <li><strong>デジタルトランスフォーメーション（DX）プロジェクト:</strong> 紙のない生産環境への移行を推進し、デジタルトランスフォーメーションにおいて中心的な役割を担う。</li>
+        <li><strong>生産データ管理システム（PDMS）の開発:</strong> 生産プロセスのフローデータを管理・制御するシステムを設計・実装し、データの精度を高め、意思決定の質を向上。</li>
+        <li><strong>クロスファンクショナルな連携:</strong> 自動化システムの統合を確実に進め、生産効率の継続的改善に向けて多部門と密に協力。</li>
+        <li><strong>キャリアの転換:</strong> 製品設計エンジニアとして10年間の経験を積んだ後、システム開発エンジニアへ転身し、生産自動化やデータ管理を支えるシステム開発に貢献。</li>
+      </ul>
+
+
+    </section>
+
+    <section>
+      <h2 class="section-title">スキルセット</h2>
+      <div class="skills">
+        <p><strong>プログラミング言語:</strong> Python, C#, Java, JavaScript, HTML, CSS, SQL</p>
+        <p><strong>フレームワーク:</strong> Django, Flask, React, Angular, WPF</p>
+        <p><strong>ツール:</strong> Git, Docker, Jenkins, Visual Studio, IntelliJ IDEA</p>
+        <p><strong>データベース:</strong> PostgreSQL, MySQL, SQLite, MongoDB</p>
+        <p><strong>クラウド:</strong> AWS, GCP, Azure</p>
+        <p><strong>その他:</strong> RESTful API, GraphQL, GitHub Actions, CI/CD</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">レーダーチャート</h2>
+      <div class="radar-chart-container">
+        <canvas id="skillsRadarChart"></canvas>
+      </div>
+    </section>
+    
+    <section>
+      <h2 class="section-title">ポートフォリオと貢献</h2>
+      <ul>
+        <li>自動車部品の設計および自動化プロセスの改善。</li>
+        <li>業務効率向上のためのウェブアプリケーションの開発と展開。</li>
+        <li>社内チームへのPythonおよびDjangoに関するメンタリング。</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2 class="section-title">その他</h2>
+      <ul>
+        <li><strong>希望年収</strong>: （記入予定）万円（残業代別途）</li>
+        <li><strong>個人目標</strong>: JLPT N1の取得、日本語のビジネス会話能力の向上、技術力の向上を目指す。</li>
+      </ul>
+    </section>
+    
+  </div>
+
+  <script>
+    var ctx = document.getElementById('skillsRadarChart').getContext('2d');
+    var radarChart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['Python', 'C#', 'JavaScript', 'SQL', 'Django', 'Java'],
+        datasets: [{
+          label: 'スキルレベル',
+          data: [9, 8, 7, 8, 9, 7],
+          backgroundColor: 'rgba(39, 174, 96, 0.2)',
+          borderColor: '#27ae60',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        scales: {
+          r: {
+            min: 0,
+            max: 10,
+            ticks: {
+              stepSize: 2
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
