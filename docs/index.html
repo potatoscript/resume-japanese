@@ -251,11 +251,10 @@
       </div>
     </section>
 
-    <section>
-      <h2 class="section-title">レーダーチャート</h2>
-      <div class="radar-chart-container">
-        <canvas id="skillsRadarChart"></canvas>
-      </div>
+    <!-- Radar Chart Section -->
+    <section class="radar-chart-container">
+      <h2 class="section-title">プログラミング言語のスキル</h2>
+      <canvas id="skillsRadarChart"></canvas>
     </section>
     
     <section>
@@ -278,27 +277,26 @@
   </div>
 
   <script>
-    var ctx = document.getElementById('skillsRadarChart').getContext('2d');
-    var radarChart = new Chart(ctx, {
+    // Radar Chart for Skills
+    const ctx = document.getElementById('skillsRadarChart').getContext('2d');
+    const skillsRadarChart = new Chart(ctx, {
       type: 'radar',
       data: {
-        labels: ['Python', 'C#', 'JavaScript', 'SQL', 'Django', 'Java'],
+        labels: ['JavaScript', 'C#','Python', 'Java', 'SQL', 'Django','Docker', 'Vue.js', 'React.js', 'Angular.js', 'Rubby', 'IOS'],
         datasets: [{
-          label: 'スキルレベル',
-          data: [9, 8, 7, 8, 9, 7],
-          backgroundColor: 'rgba(39, 174, 96, 0.2)',
-          borderColor: '#27ae60',
-          borderWidth: 2
+          label: 'Technical Skills',
+          data: [10, 9, 8, 7, 7, 6, 6, 5, 3, 3, 2, 0], // Skill proficiency (scale of 1-10)
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
         }]
       },
       options: {
-        scales: {
-          r: {
-            min: 0,
+        scale: {
+          ticks: {
+            beginAtZero: true,
             max: 10,
-            ticks: {
-              stepSize: 2
-            }
+            stepSize: 1
           }
         }
       }
