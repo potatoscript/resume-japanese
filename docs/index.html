@@ -1,145 +1,146 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>POTATOSCRIPT 履歴書</title>
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;  /* 白背景 */
-      color: #2c3e50;  /* 読みやすい濃い灰色の文字色 */
-      line-height: 1.6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+  <title>POTATOSCRIPT Resume</title>
+<style>
+  /* General Styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;  /* White background */
+    color: #2c3e50;  /* Dark gray text color for readability */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 
+  .container {
+    width: 80%;
+    max-width: 1000px;
+    background-color: #f8f9fa;  /* Light gray container background */
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 2rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #27ae60;  /* Elegant dark green */
+    margin-bottom: 1.5rem;
+  }
+
+  h2, h3 {
+    color: #2c3e50;  /* Dark gray text for headings */
+  }
+
+  a {
+    color: #27ae60;  /* Dark green links for a professional look */
+    text-decoration: none;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid #27ae60;  /* Dark green separator */
+    margin: 2rem 0;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.8rem;
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #27ae60;  /* Dark green section title */
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Personal Information */
+  .personal-info li {
+    font-size: 1.1rem;
+    color: #2c3e50;  /* Dark text color for personal info */
+  }
+
+  /* Job Title & Period */
+  .job-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #27ae60;  /* Dark green for job title */
+  }
+
+  .job-period {
+    font-style: italic;
+    color: #7f8c8d;  /* Gray for job period */
+  }
+
+  /* Projects & Skills */
+  .project {
+    margin-left: 1rem;
+    font-size: 1rem;
+    color: #7f8c8d;  /* Gray for project descriptions */
+  }
+
+  .skills p {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;  /* Dark gray text for skills */
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
     .container {
-      width: 80%;
-      max-width: 1000px;
-      background-color: #f8f9fa;  /* 薄い灰色の背景 */
-      padding: 2rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      margin: 2rem;
+      width: 90%;
     }
 
     h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #27ae60;  /* エレガントなダークグリーン */
-      margin-bottom: 1.5rem;
+      font-size: 2rem;
     }
 
-    h2, h3 {
-      color: #2c3e50;  /* 見出し用の濃い灰色 */
-    }
-
-    a {
-      color: #27ae60;  /* プロフェッショナルな外観のダークグリーンのリンク */
-      text-decoration: none;
-    }
-
-    section {
-      margin-bottom: 2.5rem;
-    }
-
-    hr {
-      border: none;
-      border-top: 2px solid #27ae60;  /* ダークグリーンの区切り線 */
-      margin: 2rem 0;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 0.8rem;
-    }
-
-    /* セクションタイトル */
     .section-title {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: #27ae60;  /* ダークグリーンのセクションタイトル */
-      border-bottom: 2px solid #27ae60;
-      padding-bottom: 0.5rem;
+      font-size: 1.4rem;
     }
 
-    /* 個人情報 */
-    .personal-info li {
-      font-size: 1.1rem;
-      color: #2c3e50;  /* 個人情報用の暗い文字色 */
-    }
-
-    /* 職業名・期間 */
     .job-title {
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      color: #27ae60;  /* 職業名のダークグリーン */
-    }
-
-    .job-period {
-      font-style: italic;
-      color: #7f8c8d;  /* 期間用の灰色 */
-    }
-
-    /* プロジェクト & スキル */
-    .project {
-      margin-left: 1rem;
       font-size: 1rem;
-      color: #7f8c8d;  /* プロジェクト説明用の灰色 */
     }
+  }
 
-    .skills p {
-      margin-bottom: 0.5rem;
-      color: #2c3e50;  /* スキル用のダークグレー */
-    }
+  canvas {
+    width: 80% !important;
+    height: auto !important;
+  }
 
-    /* レスポンシブデザイン */
-    @media (max-width: 768px) {
-      .container {
-        width: 90%;
-      }
+  /* Radar Chart Section */
+  .radar-chart-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
 
-      h1 {
-        font-size: 2rem;
-      }
-
-      .section-title {
-        font-size: 1.4rem;
-      }
-
-      .job-title {
-        font-size: 1rem;
-      }
-    }
-
-    canvas {
-      width: 80% !important;
-      height: auto !important;
-    }
-
-    /* レーダーチャートセクション */
-    .radar-chart-container {
-      width: 100%;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    #skillsRadarChart {
-      width: 100%;
-      height: 200px;
-    }
-  </style>
+  #skillsRadarChart {
+    width: 100%;
+    height: 200px;
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -235,19 +236,16 @@
         <li><strong>クロスファンクショナルな連携:</strong> 自動化システムの統合を確実に進め、生産効率の継続的改善に向けて多部門と密に協力。</li>
         <li><strong>キャリアの転換:</strong> 製品設計エンジニアとして10年間の経験を積んだ後、システム開発エンジニアへ転身し、生産自動化やデータ管理を支えるシステム開発に貢献。</li>
       </ul>
-
-
     </section>
 
     <section>
       <h2 class="section-title">スキルセット</h2>
       <div class="skills">
-        <p><strong>プログラミング言語:</strong> Python, C#, Java, JavaScript, HTML, CSS, SQL</p>
-        <p><strong>フレームワーク:</strong> Django, Flask, React, Angular, WPF</p>
-        <p><strong>ツール:</strong> Git, Docker, Jenkins, Visual Studio, IntelliJ IDEA</p>
-        <p><strong>データベース:</strong> PostgreSQL, MySQL, SQLite, MongoDB</p>
-        <p><strong>クラウド:</strong> AWS, GCP, Azure</p>
-        <p><strong>その他:</strong> RESTful API, GraphQL, GitHub Actions, CI/CD</p>
+        <p><strong>プログラミング言語:</strong> Python, C#, PHP, JavaScript, SQL, VBA, MATLAB, Java, Ruby</p>
+        <p><strong>フレームワーク:</strong> Django, ASP.NET Core MVC, Vue.js, React.js, jQuery, pandas, Ruby on Rails</p>
+        <p><strong>ツール:</strong> AutoCAD, Inventor, SolidWorks, Visual Studio, JupyterLab, Git, GitHub Actions, Docker, Azure, Jira, SourceTree, MS Offices</p>
+        <p><strong>データベース:</strong> PostgreSQL, MySQL, Oracle, SQL Server, SQLite</p>
+        <p><strong>クラウド:</strong> DevOps, Data analysis, Web server config (Apache, IIS)</p>
       </div>
     </section>
 
